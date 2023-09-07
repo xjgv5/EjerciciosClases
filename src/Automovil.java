@@ -4,11 +4,13 @@ public class Automovil {
     String color = "gris";
     double cilindrado;
 
-    public void detalle(){
-        System.out.println("auto.fabricante = " + this.fabricante);
-        System.out.println("auto.modelo = " + this.modelo);
-        System.out.println("auto.color = " + this.color);
-        System.out.println("auto.cilindrado = " + this.cilindrado);
+    public String detalle(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("auto.fabricante = " + this.fabricante);
+        sb.append("\nauto.modelo = " + this.modelo);
+        sb.append("\nauto.color = " + this.color);
+        sb.append("\nauto.cilindrado = " + this.cilindrado);
+        return sb.toString();
     }
 
 }

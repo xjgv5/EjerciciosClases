@@ -8,6 +8,6 @@ public class EjemploAutomovil {
         auto.cilindrado = 2.0;
         auto.color = "Blanco";
 
-        auto.detalle();
+        System.out.println(auto.detalle());
     }
 }
