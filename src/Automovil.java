@@ -5,12 +5,25 @@ public class Automovil {
     double cilindrado;
 
     public String detalle(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("auto.fabricante = " + this.fabricante);
-        sb.append("\nauto.modelo = " + this.modelo);
-        sb.append("\nauto.color = " + this.color);
-        sb.append("\nauto.cilindrado = " + this.cilindrado);
-        return sb.toString();
+        return "auto.fabricante = " + this.fabricante +
+        "\nauto.modelo = " + this.modelo +
+        "\nauto.color = " + this.color +
+        "\nauto.cilindrado = " + this.cilindrado;
+
+    }
+
+    public String acelerar(int rpm){
+        return "el auto " + this.fabricante + " acelerando a " + rpm + " rpm";
+    }
+
+    public String frenar(){
+        return "el auto " + this.fabricante + " frenando !";
+    }
+
+    public String acelerandoFrenar(int rpm){
+        String acelerar = this.acelerar(rpm);
+        String frenar = this.frenar();
+        return acelerar + "\n" + frenar;
     }
 
 }

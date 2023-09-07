@@ -9,5 +9,7 @@ public class EjemploAutomovil {
         auto.color = "Blanco";
 
         System.out.println(auto.detalle());
+        System.out.println();
+        System.out.println(auto.acelerandoFrenar(4000));
     }
 }
