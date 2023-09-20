@@ -3,10 +3,10 @@ public class EjemploAutomovil {
 
         Automovil auto = new Automovil();
 
-        auto.fabricante = "Subaru";
-        auto.modelo = "Impresa";
-        auto.cilindrado = 2.0;
-        auto.color = "Blanco";
+        auto.setFabricante("subaru");
+        auto.setModelo("Impresa");
+        auto.setCilindrado(2.0);
+        auto.setColor("blanco");
 
         System.out.println(auto.detalle());
         System.out.println();

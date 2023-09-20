@@ -5,6 +5,46 @@ public class Automovil {
     double cilindrado;
     int capacidadTanque = 40;
 
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getCilindrado() {
+        return cilindrado;
+    }
+
+    public void setCilindrado(double cilindrado) {
+        this.cilindrado = cilindrado;
+    }
+
+    public int getCapacidadTanque() {
+        return capacidadTanque;
+    }
+
+    public void setCapacidadTanque(int capacidadTanque) {
+        this.capacidadTanque = capacidadTanque;
+    }
+
     public String detalle(){
         return "auto.fabricante = " + this.fabricante +
         "\nauto.modelo = " + this.modelo +
