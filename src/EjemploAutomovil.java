@@ -1,3 +1,5 @@
+import javax.crypto.spec.PSource;
+
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
@@ -12,6 +14,9 @@ public class EjemploAutomovil {
         System.out.println();
         System.out.println(subaru.acelerandoFrenar(4000));
         System.out.println(auto.equals(subaru));
+
+        System.out.println("---------------------");
+        System.out.println(mazda);
 
         System.out.println("kilometros por litro " + subaru.calcularConsumo(300, 0.75f));
         System.out.println("kilometros por litro " + subaru.calcularConsumo(300, 60));
