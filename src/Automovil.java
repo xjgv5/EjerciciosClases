@@ -14,11 +14,18 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrado, int capacidadTanque) {
-        this.fabricante = fabricante;
-        this.modelo = modelo;
+    public Automovil(String fabricante, String modelo, String color){
+        this(fabricante, modelo);
         this.color = color;
+    }
+
+    public Automovil(String fabricante, String modelo, String color, double cilindrado) {
+        this(fabricante, modelo, color);
         this.cilindrado = cilindrado;
+    }
+
+    public Automovil(String fabricante, String modelo, String color, double cilindrado, int capacidadTanque) {
+        this(fabricante, modelo, color, cilindrado);
         this.capacidadTanque = capacidadTanque;
     }
 
