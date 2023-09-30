@@ -3,12 +3,21 @@ public class Automovil {
     private int id;
     private String fabricante;
     private String modelo;
-    private String color = "gris";
+    private Color color = Color.GRIS;
     private double cilindrado;
     private int capacidadTanque = 40;
-    private static int ultimoId;
 
+    private static int ultimoId;
     private static  String colorPatente = "Naranja";
+
+    public static final Integer VELOCIDAD_MAX_CARRETERA = 120;
+    public static final int VELOCIDAD_MAX_CIUDAD = 60;
+
+    public static final String COLOR_ROJO = "Rojo";
+    public static final String COLOR_AMARILLO = "Amarillo";
+    public static final String COLOR_AZUL = "Azul";
+    public static final String COLOR_BLANCO = "Blanco";
+    public static final String COLOR_GRIS = "Gris Oscuro";
 
     public Automovil(){
         this.id = ++ultimoId;
@@ -21,17 +30,17 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public Automovil(String fabricante, String modelo, String color){
+    public Automovil(String fabricante, String modelo, Color color){
         this(fabricante, modelo);
         this.color = color;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrado) {
+    public Automovil(String fabricante, String modelo, Color color, double cilindrado) {
         this(fabricante, modelo, color);
         this.cilindrado = cilindrado;
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindrado, int capacidadTanque) {
+    public Automovil(String fabricante, String modelo, Color color, double cilindrado, int capacidadTanque) {
         this(fabricante, modelo, color, cilindrado);
         this.capacidadTanque = capacidadTanque;
     }
@@ -60,11 +69,11 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
