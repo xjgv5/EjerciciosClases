@@ -1,15 +1,22 @@
 public class Automovil {
-    String fabricante;
-    String modelo;
-    String color = "gris";
-    double cilindrado;
-    int capacidadTanque = 40;
+
+    private int id;
+    private String fabricante;
+    private String modelo;
+    private String color = "gris";
+    private double cilindrado;
+    private int capacidadTanque = 40;
+    private static int ultimoId;
+
+    private static  String colorPatente = "Naranja";
 
     public Automovil(){
+        this.id = ++ultimoId;
 
     }
 
     public Automovil(String fabricante, String modelo) {
+        this();
         this.fabricante = fabricante;
         this.modelo = modelo;
     }
@@ -27,6 +34,14 @@ public class Automovil {
     public Automovil(String fabricante, String modelo, String color, double cilindrado, int capacidadTanque) {
         this(fabricante, modelo, color, cilindrado);
         this.capacidadTanque = capacidadTanque;
+    }
+
+    public static String getColorPatente() {
+        return colorPatente;
+    }
+
+    public static void setColorPatente(String colorPatente) {
+        Automovil.colorPatente = colorPatente;
     }
 
     public String getFabricante() {
@@ -69,10 +84,20 @@ public class Automovil {
         this.capacidadTanque = capacidadTanque;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String detalle(){
-        return "auto.fabricante = " + this.fabricante +
+        return "auto.id = "+ this.id  +
+        "\nauto.fabricante = " + this.fabricante +
         "\nauto.modelo = " + this.modelo +
         "\nauto.color = " + this.color +
+                "\nauto.patenteColor = " + colorPatente +
         "\nauto.cilindrado = " + this.cilindrado;
 
     }
@@ -118,6 +143,8 @@ public class Automovil {
 
     @Override
     public String toString() {
-        return fabricante + " " + modelo;
+        return this.id + " : " + fabricante + " " + modelo;
     }
+
+
 }
