@@ -7,17 +7,13 @@ public class Automovil {
     private double cilindrado;
     private int capacidadTanque = 40;
 
+    private TipoAutomovil tipo;
+
     private static int ultimoId;
     private static  String colorPatente = "Naranja";
 
     public static final Integer VELOCIDAD_MAX_CARRETERA = 120;
     public static final int VELOCIDAD_MAX_CIUDAD = 60;
-
-    public static final String COLOR_ROJO = "Rojo";
-    public static final String COLOR_AMARILLO = "Amarillo";
-    public static final String COLOR_AZUL = "Azul";
-    public static final String COLOR_BLANCO = "Blanco";
-    public static final String COLOR_GRIS = "Gris Oscuro";
 
     public Automovil(){
         this.id = ++ultimoId;
@@ -43,6 +39,14 @@ public class Automovil {
     public Automovil(String fabricante, String modelo, Color color, double cilindrado, int capacidadTanque) {
         this(fabricante, modelo, color, cilindrado);
         this.capacidadTanque = capacidadTanque;
+    }
+
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
     }
 
     public static String getColorPatente() {
@@ -105,8 +109,9 @@ public class Automovil {
         return "auto.id = "+ this.id  +
         "\nauto.fabricante = " + this.fabricante +
         "\nauto.modelo = " + this.modelo +
+        "\nauto.tipo = "+ this.tipo.getNombre() +
         "\nauto.color = " + this.color +
-                "\nauto.patenteColor = " + colorPatente +
+        "\nauto.patenteColor = " + colorPatente +
         "\nauto.cilindrado = " + this.cilindrado;
 
     }
