@@ -40,6 +40,15 @@ public class EjemploAutomovilEnum {
             }
         }
 
+        TipoAutomovil[] tipos = TipoAutomovil.values();
+        for (TipoAutomovil ta: tipos){
+            System.out.print(ta + " => " + ta.name() + " , " +
+                    ta.getNombre() + ", " +
+                    ta.getDescripcion() + " , " +
+                    ta.getNumeroPuertas());
+            System.out.println();
+        }
+
     }
 }
 
