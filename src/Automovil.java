@@ -43,6 +43,12 @@ public class Automovil {
         this.estanque = estanque;
     }
 
+    public Automovil(String fabricante, String modelo, Color color, Motor motor, Estanque estanque, Persona conductor, Rueda[] ruedas) {
+        this(fabricante, modelo, color, motor, estanque);
+        this.conductor = conductor;
+        this.ruedas = ruedas;
+    }
+
     public TipoAutomovil getTipo() {
         return tipo;
     }
