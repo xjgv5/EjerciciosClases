@@ -24,6 +24,8 @@ public class EjemploAutomovilStatic {
         System.out.println(mazda.detalle());
         System.out.println();
         System.out.println(nissan.detalle());
+        System.out.println();
+        System.out.println(mazda.calcularConsumo(300, 70));
 
     }
 }
