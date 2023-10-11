@@ -1,4 +1,4 @@
-public class Automovil {
+public class Automovil implements Comparable{
 
     private int id;
     private String fabricante;
@@ -215,4 +215,9 @@ public class Automovil {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        Automovil a = (Automovil) o;
+        return fabricante.compareTo(a.fabricante);
+    }
 }
